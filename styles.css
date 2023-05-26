@@ -1,0 +1,66 @@
+:root{
+  --very-dark-gray: hsl(0, 0%, 17%);
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
+body{
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', sans-serif;
+}
+
+.title{
+  color: white;
+  margin-top: -8.2rem;
+  font-size: 1.8rem;
+}
+
+.header{
+  background-image: url('./images/pattern-bg-desktop.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 25%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.input-container{
+  border: none;
+  width: 30%;
+  max-width: 500px;
+  padding: 0;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.inputIP{
+  padding: 1rem;
+  width: 80%;
+  border: none;
+  border-radius: 1rem 0 0 1rem;
+}
+
+.inputIP:focus{
+  outline: none;
+}
+
+.button{
+  background: var(--very-dark-gray);
+  border: none;
+  height: 100%;
+  width: 20%;
+  border-radius: 0 1rem 1rem 0;
+}
+
+.button:hover{  
+  cursor: pointer;
+  background: var(--dark-gray)
+}
