@@ -6,10 +6,10 @@ function pCreate(text){
   return labels;
 }
 
-function dataTextCreate(text){
+function dataTextCreate(name){
   const dataText = document.createElement('h3');
-  dataText.className = 'data-text'
-  dataText.innerText = text;
+  dataText.className = name
+
 
   return dataText;
 }
@@ -56,10 +56,10 @@ header.append(inputContainer);
 header.append(ipInfoContainer);
 
 let infoObj = [
-  { 'label' : 'IP ADDRESS', 'info' : 'asdfasdf'},
-  { 'label' : 'LOCATION', 'info' : 'asdfacxvb'},
-  { 'label' : 'TIMEZONE', 'info' : 'asdf123f'},
-  { 'label' : 'ISP', 'info' : 'asdfasdf7890'}
+  { label : 'IP ADDRESS', name : 'address'},
+  { label : 'LOCATION', name : 'location'},
+  { label : 'TIMEZONE', name : 'time-zone'},
+  { label : 'ISP', name : 'isp'}
 ]
 
 const singleInfoContainer = document.querySelectorAll('.single-container');
@@ -67,17 +67,14 @@ const singleInfoContainer = document.querySelectorAll('.single-container');
 for(let i = 0; i < infoObj.length; i++){
   for(let j = 0; j < singleInfoContainer.length; j++){
     if(i === j){
-      singleInfoContainer[j].append(pCreate(infoObj[i]['label']))
-      singleInfoContainer[j].append(
-        dataTextCreate(infoObj[i]['info'])
-      )
+      singleInfoContainer[j].append(pCreate(infoObj[i].label))
+      singleInfoContainer[j].append(dataTextCreate(infoObj[i].name))
     }
   } 
 }
 
 const mapDisplay = document.createElement('div');
-mapDisplay.className = 'map-display';
-
+mapDisplay.setAttribute('id', 'map-display');
 body.append(mapDisplay);
 
 
