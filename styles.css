@@ -97,13 +97,18 @@ body{
 .labels{
   color: var(--dark-gray);
   margin-left: 1rem;
+  height: 50%;
+  width: 100%;
+  text-align: left;
+  padding-top: 1rem;
 }
 
-.data-text{
+.address, .location,
+.time-zone, .isp{
   margin-left: 1rem;
-  color: var(--very-dark-gray);
+  height: 50%;
 }
 
-.map-display{
+#map-display{
   height: 80vh;
 }
