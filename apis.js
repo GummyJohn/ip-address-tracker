@@ -6,7 +6,7 @@ const ipInput = document.querySelector('.inputIP');
 const searchButton = document.querySelector('.button')
 
 
-function ipValidatior(address){
+function ipValidator(address){
   const pattern = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
 
   return pattern.test(address)
@@ -54,7 +54,7 @@ function ipLocator(address){
 }
 
 searchButton.addEventListener('click', () => {
-  if(ipValidatior(ipInput.value)){
+  if(ipValidator(ipInput.value)){
     ipLocator(ipInput.value);
   }
   else{
