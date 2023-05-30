@@ -29,7 +29,7 @@ inputContainer.className = 'input-container';
 const inputIP = document.createElement('input');
   inputIP.className = 'inputIP'
   inputIP.type = 'text';
-  inputIP.placeholder = 'Search for any IP address or domain'
+  inputIP.placeholder = 'Search for any IP address'
 ;
 
 const arrowButton = document.createElement('button');
@@ -74,9 +74,8 @@ for(let i = 0; i < infoObj.length; i++){
 }
 
 const mapDisplay = document.createElement('div');
-mapDisplay.setAttribute('id', 'map-display');
+mapDisplay.setAttribute('id', 'map');
 body.append(mapDisplay);
-
 
 
 
